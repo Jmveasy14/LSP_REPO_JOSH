@@ -9,7 +9,7 @@ public class WordProcessorDriver {
         System.out.println("Test 1 - Longest words: " + longest1);  
         
         // Test with powerful repeated
-        WordProcessor wp2 = new WordProcessor("Java is a powerful  tool!");
+        WordProcessor wp2 = new WordProcessor("Java is a powerful tool!");
         List<String> longest2 = wp2.findLongestWords();
         System.out.println("Test 2 - Longest words: " + longest2);  
         
