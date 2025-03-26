@@ -1,5 +1,5 @@
 {
-  "java.prohect.sourcePaths": ["src],
+  "java.prohect.sourcePaths": ["src"],
   "java.project.outputPath": "bin",
   "java.project.refrencedLibraries": [
     "lib/**/*.jar"
