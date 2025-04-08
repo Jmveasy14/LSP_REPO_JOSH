@@ -75,7 +75,7 @@ public class IntegerSet {
         if (set.isEmpty()) {
             throw new RuntimeException("Cannot find the largest element in an empty set.");
         }
-        return set.stream().max(Integer::compare).orElseThrow();
+        return set.stream().max(Integer::compare).get(); // Use get() since the set is not empty
     }
 
     /**
@@ -88,7 +88,7 @@ public class IntegerSet {
         if (set.isEmpty()) {
             throw new RuntimeException("Cannot find the smallest element in an empty set.");
         }
-        return set.stream().min(Integer::compare).orElseThrow();
+        return set.stream().min(Integer::compare).get(); // Use get() since the set is not empty
     }
 
     /**
@@ -138,6 +138,22 @@ public class IntegerSet {
      */
     public void diff(IntegerSet otherSet) {
         set.removeAll(otherSet.set);
+    }
+
+    /**
+     * Performs a complement operation: modifies this set to only include elements
+     * that are in the other set but not in this set.
+     * 
+     * @param otherSet The set to compare against.
+     */
+    public void complement(IntegerSet otherSet) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer num : otherSet.set) {
+            if (!this.set.contains(num)) {
+                result.add(num);
+            }
+        }
+        this.set = result;
     }
 
     /**
