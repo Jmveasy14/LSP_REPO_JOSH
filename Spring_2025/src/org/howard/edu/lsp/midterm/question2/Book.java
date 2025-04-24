@@ -51,3 +51,5 @@ public class Book {
     public String toString() {
         return "Title: " + title + ", Author: " + author + 
                ", ISBN: " + ISBN + ", Year Published: " + yearPublished;
+    }
+}
