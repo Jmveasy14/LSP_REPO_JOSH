@@ -18,16 +18,12 @@ public class Task {
         return name;
     }
 
-    public int getPriority() {
-        return priority;
+    public void setStatus(String newStatus) {
+        this.status = newStatus;
     }
 
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     @Override
